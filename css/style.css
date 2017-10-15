@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
 body {
   padding-top: 20px;
-  font-family: 'Palatino Linotype', Baskerville, serif;
+  font-family: 'Roboto Slab', serif;
 }
 
 .greeting {
