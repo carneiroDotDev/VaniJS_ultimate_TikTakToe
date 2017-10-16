@@ -24,3 +24,8 @@ td {
   border: 5px solid black;
   font-size: 3.5em;
 }
+
+.footer {
+    margin-top:2rem;
+    margin-bottom:0;
+}
