@@ -9,7 +9,10 @@ body {
 }
 
 table {
-  margin: auto;
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 td {
@@ -18,4 +21,20 @@ td {
   height: 100px;
   border: 5px solid black;
   font-size: 3.5em;
+  width:10rem;
+  height:10rem;
 }
+
+#one, #two, #three{
+    border-top:0px;
+}
+#one,#four, #seven{
+    border-left:0px;
+}
+#seven, #eight, #nine{
+    border-bottom:0px;
+}
+#three, #six, #nine{
+    border-right:0px;
+}
+
