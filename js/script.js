@@ -14,8 +14,8 @@ const restart = () => {
     elements[i].textContent = '';
   }
 };
-button = document.getElementsByClassName('btn');
-button[0].onclick = restart;
+//button = document.getElementsByClassName('btn');
+//button[0].onclick = restart;
 
 for (i = 0; i < elements.length; i++) {
   elements[i].addEventListener('click', fill, false);
