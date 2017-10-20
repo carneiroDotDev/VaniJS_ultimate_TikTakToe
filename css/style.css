@@ -2,39 +2,82 @@
 
 body {
   font-family: 'Roboto Slab', serif;
-  position:absolute;
+  background-color: #f9f9f9;
+  position: absolute;
   border: 10px solid #999;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
 }
 
 table {
   position: absolute;
-  top: 50%; 
+  top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
+  border: 3px solid pink;
+  max-width:480px;
+  min-width:480px;
 }
 
 td {
   text-align: center;
   width: 100px;
   height: 100px;
-  border: 5px solid black;
+  border: 10px solid black;
   font-size: 3.5em;
-  width:10rem;
-  height:10rem;
+  width: 10rem;
+  height: 10rem;
 }
 
-#one, #two, #three{
-    border-top:0px;
+#one,
+#two,
+#three {
+  border-top: 0px;
 }
-#one,#four, #seven{
-    border-left:0px;
+#one,
+#four,
+#seven {
+  border-left: 0px;
 }
-#seven, #eight, #nine{
-    border-bottom:0px;
+#seven,
+#eight,
+#nine {
+  border-bottom: 0px;
 }
-#three, #six, #nine{
-    border-right:0px;
+#three,
+#six,
+#nine {
+  border-right: 0px;
 }
 
+/* Small screen - acts like the app would */
+@media only screen and (max-width: 500px) {
+  table {
+    max-width: 480px;
+  }
+}
+@media only screen and (min-width: 501px) and (max-width: 767px) {
+  table {
+    max-width: 480px;
+    margin: 20px auto 20px auto;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  table {
+    max-width: 480px;
+    margin: 20px auto 20px auto;
+  }
+}
+/* Larger screens act like a demo for the app */
+@media only screen and (min-width: 960px) {
+  table {
+    max-width: 480px;
+    margin: 20px auto 20px auto;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  h1 {
+    background-image: url(../images/2xkinglogo.png);
+    background-size: 72px 72px;
+  }
+}
