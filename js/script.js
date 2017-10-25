@@ -1,37 +1,101 @@
 elements = document.getElementsByTagName('td');
 
-let z=0;
-let sym=0;
+let z = 0;
+let sym = 0;
+
+const winner = (element1, element2, element3) => {
+  setTimeout(function() {}, 300);
+  mark = element1.textContent;
+  element1.textContent = '';
+  element2.textContent = '';
+  element3.textContent = '';
+  setTimeout(function() {
+    element1.textContent = mark;
+    element2.textContent = mark;
+    element3.textContent = mark;
+  }, 600);
+  console.log(mark);
+};
 
 const increment = () => {
-    z++;
-    console.log(z);
-   // console.log(elements[0].textContet);
-   if ( z>=2 ) {
-      if (elements[0].textContent === elements[1].textContent && 
-          elements[1].textContent === elements[2].textContent)
-         //{elem = [elements[0],elements[1],elements[2]];
-         {elem = elements[0].textContent;
-          elements[0].textContent=''
-          elements[1].textContent=''
-          elements[2].textContent=''
-    setTimeout(function(){
-          elements[0].textContent=elem
-          elements[1].textContent=elem
-          elements[2].textContent=elem}, 600);
-          console.log(elem);
-         }
-   }
-}
+  z++;
+  if (z >= 2) {
+    if (
+      elements[0].textContent === elements[1].textContent &&
+      elements[1].textContent === elements[2].textContent &&
+      elements[0].textContent !== '' &&
+      elements[1].textContent !== '' &&
+      elements[2].textContent !== ''
+    ) {
+      winner(elements[0], elements[1], elements[2]);
+    } else if (
+      elements[3].textContent === elements[4].textContent &&
+      elements[4].textContent === elements[5].textContent &&
+      elements[3].textContent !== '' &&
+      elements[4].textContent !== '' &&
+      elements[5].textContent !== ''
+    ) {
+      winner(elements[3], elements[4], elements[5]);
+    } else if (
+      elements[6].textContent === elements[7].textContent &&
+      elements[7].textContent === elements[8].textContent &&
+      elements[6].textContent !== '' &&
+      elements[7].textContent !== '' &&
+      elements[8].textContent !== ''
+    ) {
+      winner(elements[6], elements[7], elements[8]);
+    } else if (
+      elements[0].textContent === elements[3].textContent &&
+      elements[3].textContent === elements[6].textContent &&
+      elements[0].textContent !== '' &&
+      elements[3].textContent !== '' &&
+      elements[6].textContent !== ''
+    ) {
+      winner(elements[0], elements[3], elements[6]);
+    } else if (
+      elements[1].textContent === elements[4].textContent &&
+      elements[4].textContent === elements[7].textContent &&
+      elements[1].textContent !== '' &&
+      elements[4].textContent !== '' &&
+      elements[7].textContent !== ''
+    ) {
+      winner(elements[1], elements[4], elements[7]);
+    } else if (
+      elements[2].textContent === elements[5].textContent &&
+      elements[5].textContent === elements[8].textContent &&
+      elements[2].textContent !== '' &&
+      elements[5].textContent !== '' &&
+      elements[8].textContent !== ''
+    ) {
+      winner(elements[2], elements[5], elements[8]);
+    } else if (
+      elements[0].textContent === elements[4].textContent &&
+      elements[4].textContent === elements[8].textContent &&
+      elements[0].textContent !== '' &&
+      elements[4].textContent !== '' &&
+      elements[8].textContent !== ''
+    ) {
+      winner(elements[0], elements[4], elements[8]);
+    } else if (
+      elements[2].textContent === elements[4].textContent &&
+      elements[4].textContent === elements[6].textContent &&
+      elements[2].textContent !== '' &&
+      elements[4].textContent !== '' &&
+      elements[6].textContent !== ''
+    ) {
+      winner(elements[2], elements[4], elements[6]);
+    }
+  }
+};
 
 function fill() {
-  if (sym===0) {
+  if (sym === 0) {
     this.textContent = 'X';
     sym++;
-  } else if (sym===1) {
+  } else if (sym === 1) {
     this.textContent = 'O';
     sym--;
-  } 
+  }
 }
 //const fill = () => this.texContent= 'X';
 const restart = () => {
@@ -50,4 +114,3 @@ for (i = 0; i < elements.length; i++) {
 //const test = event => console.log(event);
 //elements[0].addEventListener('click', test, false);
 //
-
