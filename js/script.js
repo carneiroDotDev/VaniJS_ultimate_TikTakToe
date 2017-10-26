@@ -4,7 +4,7 @@ let z = 0;
 let sym = 0;
 
 const winner = (element1, element2, element3) => {
-  setTimeout(function() {}, 300);
+  // setTimeout(function() {}, 300);
   mark = element1.textContent;
   element1.textContent = '';
   element2.textContent = '';
@@ -15,6 +15,21 @@ const winner = (element1, element2, element3) => {
     element3.textContent = mark;
   }, 600);
   console.log(mark);
+};
+
+const restart = () => {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].textContent = '';
+  }
+};
+
+const game_over = () => {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].removeEventListener('click', fill, false);
+    elements[i].removeEventListener('click', increment, false);
+  }
+  // setTimeout(function() {},4000)
+  // restart();
 };
 
 const increment = () => {
@@ -28,6 +43,7 @@ const increment = () => {
       elements[2].textContent !== ''
     ) {
       winner(elements[0], elements[1], elements[2]);
+      game_over();
     } else if (
       elements[3].textContent === elements[4].textContent &&
       elements[4].textContent === elements[5].textContent &&
@@ -36,6 +52,7 @@ const increment = () => {
       elements[5].textContent !== ''
     ) {
       winner(elements[3], elements[4], elements[5]);
+      game_over();
     } else if (
       elements[6].textContent === elements[7].textContent &&
       elements[7].textContent === elements[8].textContent &&
@@ -44,6 +61,7 @@ const increment = () => {
       elements[8].textContent !== ''
     ) {
       winner(elements[6], elements[7], elements[8]);
+      game_over();
     } else if (
       elements[0].textContent === elements[3].textContent &&
       elements[3].textContent === elements[6].textContent &&
@@ -52,6 +70,7 @@ const increment = () => {
       elements[6].textContent !== ''
     ) {
       winner(elements[0], elements[3], elements[6]);
+      game_over();
     } else if (
       elements[1].textContent === elements[4].textContent &&
       elements[4].textContent === elements[7].textContent &&
@@ -60,6 +79,7 @@ const increment = () => {
       elements[7].textContent !== ''
     ) {
       winner(elements[1], elements[4], elements[7]);
+      game_over();
     } else if (
       elements[2].textContent === elements[5].textContent &&
       elements[5].textContent === elements[8].textContent &&
@@ -68,6 +88,7 @@ const increment = () => {
       elements[8].textContent !== ''
     ) {
       winner(elements[2], elements[5], elements[8]);
+      game_over();
     } else if (
       elements[0].textContent === elements[4].textContent &&
       elements[4].textContent === elements[8].textContent &&
@@ -76,6 +97,7 @@ const increment = () => {
       elements[8].textContent !== ''
     ) {
       winner(elements[0], elements[4], elements[8]);
+      game_over();
     } else if (
       elements[2].textContent === elements[4].textContent &&
       elements[4].textContent === elements[6].textContent &&
@@ -84,6 +106,7 @@ const increment = () => {
       elements[6].textContent !== ''
     ) {
       winner(elements[2], elements[4], elements[6]);
+      game_over();
     }
   }
 };
@@ -98,11 +121,6 @@ function fill() {
   }
 }
 //const fill = () => this.texContent= 'X';
-const restart = () => {
-  for (i = 0; i < elements.length; i++) {
-    elements[i].textContent = '';
-  }
-};
 //button = document.getElementsByClassName('btn');
 //button[0].onclick = restart;
 
