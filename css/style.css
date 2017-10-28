@@ -20,38 +20,28 @@ table {
 td {
   text-align: center;
   border: 6px solid black;
-  font-size: 80px;
+  font-size: 5.6em;
   width: 150px;
   height: 150px;
   margin: 0px;
 }
 
-.test {
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-  float: right;
-  clear: right;
-}
-
 #greeting {
-  padding-top:40px;
-  text-align:center;
-  display:none;
+  padding-top: 10px;
+  text-align: center;
+  display: none;
 }
 
-h3{
-    font-family:'Press Start 2P',serif;
-    font-size:1.3em;
-    margin-bottom:30px;
+h3 {
+  font-family: 'Press Start 2P', serif;
+  font-size: 1.3em;
+  margin-bottom: 30px;
 }
 
-p{
-    font-family:'The Girl Next Door',serif;
-    font-size:1.5em;
+p {
+  font-family: 'The Girl Next Door', serif;
+  font-size: 1.5em;
 }
-
-
 
 #one,
 #two,
