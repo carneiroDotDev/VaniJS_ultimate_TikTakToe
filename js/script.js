@@ -30,6 +30,7 @@ const game_over = () => {
   }
   // setTimeout(function() {},4000)
   // restart();
+  document.getElementById('greeting').style.display = 'block';
 };
 
 const increment = () => {
@@ -119,6 +120,7 @@ function fill() {
     this.textContent = 'O';
     sym--;
   }
+  this.removeEventListener('click', fill, false);
 }
 //const fill = () => this.texContent= 'X';
 //button = document.getElementsByClassName('btn');

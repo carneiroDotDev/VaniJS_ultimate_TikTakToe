@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Acme');
+/* @import url('https://fonts.googleapis.com/css?family=Acme'); */
+@import url('https://fonts.googleapis.com/css?family=Acme|Covered+By+Your+Grace|Press+Start+2P|The+Girl+Next+Door');
 
 body {
   background-color: #f9f9f9;
@@ -7,11 +8,13 @@ body {
 }
 
 table {
+  margin: 20px auto 20px auto;
   font-family: 'Acme', serif;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* position: absolute; */
+  /* top: 40%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  /* border: 5px solid pink; */
 }
 
 td {
@@ -20,17 +23,20 @@ td {
   font-size: 80px;
   width: 150px;
   height: 150px;
+  margin: 0px;
 }
 
 .test {
   width: 100px;
   height: 100px;
-  margin:10px;
-  float:right;
-  clear:right;
+  margin: 10px;
+  float: right;
+  clear: right;
 }
 
-.footer {
+#greeting {
+  text-align:center;
+  display:none;
 }
 
 #one,
@@ -63,20 +69,17 @@ td {
 @media only screen and (min-width: 501px) and (max-width: 767px) {
   table {
     max-width: 480px;
-    margin: 20px auto 20px auto;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   table {
     max-width: 480px;
-    margin: 20px auto 20px auto;
   }
 }
 /* Larger screens act like a demo for the app */
 @media only screen and (min-width: 960px) {
   table {
     max-width: 480px;
-    margin: 20px auto 20px auto;
   }
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
