@@ -43,6 +43,16 @@ p {
   font-size: 1.5em;
 }
 
+.image{
+    display:block;
+    background-image:url("../images/social.png");
+    background-repeat:no-repeat;
+    background-position:center;
+    height:128px;
+    width:128px;
+    margin:0px auto 0px auto;
+}
+
 #one,
 #two,
 #three {
